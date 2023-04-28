@@ -3,6 +3,8 @@ const movieId = url.searchParams.get("id");
 const movieTitle = url.searchParams.get("title")
 
 const APILINK = "https://Backend-API-for-Fullstack-Movie-Site.td6904.repl.co/api/v1/reviews/";
+// const APILINK = "http://localhost:8000/api/v1/reviews/"; When trying to run from local.
+
 
 //Send query to API and retrieve it.
 
@@ -29,7 +31,8 @@ const div_new = document.createElement('div');
   `
 main.appendChild(div_new);
 
-//Fetch from URL
+//loop over array
+// //Fetch from URL
 returnReviews(APILINK)  //<<<< Didn't work without this
 function returnReviews(url){
     fetch(url + "movie/" + movieId).then(res => res.json())
@@ -55,11 +58,17 @@ function returnReviews(url){
 }
 
 function editReview(id, review, user) {
-  // console.log(review)
+  console.log(id);
+  // console.log(review);
   const element = document.getElementById(id);
-  // console.log(element)
+  // console.log(element);
   const reviewInputId = "review" + id
   const userInputId = "user" + id
+  console.log(userInputId);
+    // console.log(review);
+    // console.log(user);
+
+
   
   element.innerHTML = `
       <p><strong>Review: </strong>
