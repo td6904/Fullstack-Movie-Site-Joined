@@ -50,7 +50,6 @@ form {
 }
 
 input {
-/*     all: unset; /*Interesting this, for the search bar*/
     font: 15px system-ui;
     color: var(--main-color);
     height: 100%;
